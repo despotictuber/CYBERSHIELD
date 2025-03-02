@@ -1,0 +1,149 @@
+/* Cyberpunk Background */
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #000428, #080808, #000);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    background: #111;
+    padding: 15px 0;
+    box-shadow: 0 0 15px #00ffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #00ffff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    transition: 0.3s;
+    text-shadow: 0 0 10px #00ffff;
+    border-radius: 5px;
+    background: rgba(0, 255, 255, 0.1);
+}
+
+nav a:hover {
+    color: #ffffff;
+    background: rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 10px #00ffff;
+}
+
+/* Feature Section */
+.feature-section {
+    text-align: center;
+    padding: 100px 60px;
+}
+
+.feature-title {
+    font-size: 2.5rem;
+    color: #ff00ff;
+    text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+    animation: glitch 1.5s infinite;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+    50% { text-shadow: -2px -2px #ff00ff, 2px 2px #00ffff; }
+    100% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+}
+
+.feature-description {
+    font-size: 1.5rem;
+    color: #00ffcc;
+    text-shadow: 0 0 15px #00ffcc;
+}
+
+/* Input Container */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#link-input {
+    width: 50%;
+    padding: 12px;
+    font-size: 1.2rem;
+    background: #222;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #00ffff;
+    transition: all 0.3s ease-in-out;
+}
+
+#link-input:focus {
+    outline: none;
+    background: #333;
+    box-shadow: 0 0 25px #00ffff;
+    transform: scale(1.05);
+}
+
+/* Cyberpunk Glowing Check Button */
+.check-btn {
+    margin-top: 20px;
+    padding: 14px 30px;
+    font-size: 1.4rem;
+    background: linear-gradient(45deg, #ff0000, #ff00ff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff00ff;
+    transition: all 0.3s;
+}
+
+.check-btn:hover {
+    background: linear-gradient(45deg, #ff3333, #ff66ff);
+    box-shadow: 0 0 25px #ff3333, 0 0 50px #ff66ff;
+    transform: scale(1.1);
+    filter: hue-rotate(30deg);
+}
+
+/* Loading Bar */
+.loading-bar-container {
+    width: 50%;
+    background: #333;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #00ffff;
+    margin: 40px auto;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.loading-bar {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, #00ffff, #ff00ff);
+    animation: loading-animation 3s forwards;
+}
+
+@keyframes loading-animation {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* Result Section */
+.result-section {
+    display: none;
+    margin-top: 25px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 0 0 15px #00ffcc;
+    font-weight: bold;
+}
