@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
             loadingContainer.style.display = "none";
 
             // Fake logic for phishing detection (You can replace this with real API logic)
-            const safeSites = ["google.com", "wikipedia.org", "github.com", "xnxx.com", "youtube.com"];
+            const safeSites = ["google.com", "wikipedia.org", "github.com"];
             const isSafe = safeSites.some(site => userLink.includes(site));
 
             if (isSafe) {
